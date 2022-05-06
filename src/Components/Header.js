@@ -8,10 +8,10 @@ function Header() {
   const [showModal, setShowModal] = useState(false);
   return (
     <div>
-      <div className="flex justify-between px-10 pt-5">
+      <div className="flex justify-between lg:px-10 pt-5 items-center px-1 pb-5 md:pb-0">
         <img src={logo} alt="Grimace Bridge Logo" />
         <button
-          className="border-2 border-[#511597] rounded-full px-7 text-[#511597] h-9"
+          className="border-2 border-[#511597] rounded-full lg:px-7 text-[#511597] h-9 text-sm lg:text-base px-3"
           onClick={() => setShowModal(true)}
         >
           Connect Wallet
