@@ -9,12 +9,12 @@ const coins = [
   {
     id: 0,
     name: "Ethereum",
-    image: { ethereum },
+    image: ethereum,
   },
   {
     id: 1,
     name: "Cronos",
-    image: { cronos },
+    image: cronos,
   },
 ];
 
@@ -23,23 +23,23 @@ function classNames(...classes) {
 }
 
 function DropdownOption() {
-  const [selected, setSelected] = useState(coins[0]);
+  const [selectedCoin, setSelected] = useState(coins);
   return (
     <div>
-      <Listbox value={selected} onChange={setSelected}>
+      <Listbox value={selectedCoin} onChange={setSelected}>
         {({ open }) => (
           <>
             <div className="mt-1 relative">
-              <Listbox.Button className="relative w-full bg-[#F3E8FF] border rounded-md px-3 py-2 cursor-pointer focus:outline-[#772EDA] focus:border-2 focus:ring-[#772EDA] focus:border-[#772EDA] sm:text-sm">
+              <Listbox.Button className="relative w-full bg-[#F3E8FF] border rounded-md px-2 cursor-pointer focus:outline-[#772EDA] focus:border-2 focus:ring-[#772EDA] focus:border-[#772EDA] sm:text-sm">
                 <div className="flex items-center">
                   <img
-                    src={selected.image}
+                    src={selectedCoin[0].image}
                     alt=""
-                    className="flex-shrink-0 pl-2 h-6 w-6 rounded-full"
+                    className="flex-shrink-0 h-12 w-12 rounded-full"
                   />
                   <div className="flex justify-between items-center">
-                    <div className="ml-4 text-[#511597] text-base">
-                      {selected.name}
+                    <div className=" text-[#511597] text-base">
+                      {selectedCoin[0].name}
                     </div>
                     <MdKeyboardArrowUp className="text-[#511597]" />
                   </div>
@@ -54,47 +54,44 @@ function DropdownOption() {
                 leaveTo="opacity-0"
               >
                 <Listbox.Options className="absolute z-10 mt-1 w-full bg-white max-h-56 rounded-md px-3 border-2 border-[#772EDA] py-2 text-base overflow-auto focus:outline-none">
-                  {coins.map((coin) => (
-                    <Listbox.Option
-                      key={coin.id}
-                      className={({ active }) =>
-                        classNames(
-                          (active =
-                            "text-[#511597] cursor-pointer select-none relative py-2 pl-3 pr-9")
-                        )
-                      }
-                      value={coin}
-                    >
-                      {({ selected, active }) => (
-                        <>
-                          <div className="flex items-center">
-                            <img
-                              src={coin.image}
-                              alt=""
-                              className="flex-shrink-0 h-6 w-6 rounded-full"
-                            />
-                            <span
-                              className={classNames(
-                                selected = "font-normal",
-                                "ml-3 block truncate"
-                              )}
-                            >
-                              {coin.name}
-                            </span>
-                          </div>
+                  <Listbox.Option
+                    className={({ active }) =>
+                      classNames(
+                        (active =
+                          "text-[#511597] cursor-pointer select-none relative py-2 pl-3 pr-9")
+                      )
+                    }
+                    value={selectedCoin[1]}
+                  >
+                    {({ selected, active }) => (
+                      <>
+                        <div className="flex items-center">
+                          <img
+                            src={selectedCoin[1].image}
+                            alt=""
+                            className="flex-shrink-0 h-6 w-6 rounded-full"
+                          />
+                          <span
+                            className={classNames(
+                              (selected = "font-normal"),
+                              "ml-3 block truncate"
+                            )}
+                          >
+                            {selectedCoin[1].name}
+                          </span>
+                        </div>
 
-                          {selected ? (
-                            <span
-                              className={classNames(
-                                (active = "text-[#511597]"),
-                                "absolute inset-y-0 right-0 flex items-center pr-4"
-                              )}
-                            ></span>
-                          ) : null}
-                        </>
-                      )}
-                    </Listbox.Option>
-                  ))}
+                        {selected ? (
+                          <span
+                            className={classNames(
+                              (active = "text-[#511597]"),
+                              "absolute inset-y-0 right-0 flex items-center pr-4"
+                            )}
+                          ></span>
+                        ) : null}
+                      </>
+                    )}
+                  </Listbox.Option>
                 </Listbox.Options>
               </Transition>
             </div>
