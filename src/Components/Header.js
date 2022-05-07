@@ -19,7 +19,7 @@ function Header() {
         <img
           src={logo}
           alt="Grimace Bridge Logo"
-          className="w-[49%] lg:w-[24%] md:w-[38%]"
+          className="w-[49%] xl:w-[17%] lg:w-[30%] md:w-[38%]"
         />
         <button
           className="border-2 border-[#511597] rounded-full lg:px-7 text-[#511597] h-9 text-sm lg:text-base px-3"
@@ -30,7 +30,7 @@ function Header() {
 
         {showModal ? (
           <>
-            <div className="lg:w-[60%] mx-auto flex items-center justify-center  fixed inset-0 z-50 w-screen">
+            <div className="lg:w-[40%] md:w-[55%] mx-auto flex items-center justify-center  fixed inset-0 z-50 w-screen">
               <div className="relative justify-center items-center flex outline-none focus:outline-none px-5">
                 {/*content*/}
                 <div className="border-0 rounded-2xl relative flex justify-center bg-[#E1D1F3] outline-none focus:outline-none">
