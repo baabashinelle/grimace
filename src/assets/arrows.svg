@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="57" viewBox="0 0 57 57">
+  <defs>
+    <filter id="Path_2103" x="0" y="0" width="57" height="57" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#ecddfd"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_986" data-name="Group 986" transform="translate(-1087 -472)">
+    <g transform="matrix(1, 0, 0, 1, 1087, 472)" filter="url(#Path_2103)">
+      <path id="Path_2103-2" data-name="Path 2103" d="M19.5,0A19.5,19.5,0,1,1,0,19.5,19.5,19.5,0,0,1,19.5,0Z" transform="translate(9 9)" fill="#dfc3ff"/>
+    </g>
+    <g id="Group_984" data-name="Group 984" transform="translate(1.546 2)">
+      <path id="Icon_metro-arrow-up-left" data-name="Icon metro-arrow-up-left" d="M15.207,13.5l-6.22-6.22h2.689a.75.75,0,1,0,0-1.5h-4.5a.749.749,0,0,0-.75.75h0v4.5a.75.75,0,1,0,1.5,0V8.345l6.22,6.22A.75.75,0,1,0,15.207,13.5Z" transform="translate(1109.364 483.366) rotate(45)" fill="#fff"/>
+      <path id="Icon_metro-arrow-up-left-2" data-name="Icon metro-arrow-up-left" d="M15.207,13.5l-6.22-6.22h2.689a.75.75,0,1,0,0-1.5h-4.5a.749.749,0,0,0-.75.75h0v4.5a.75.75,0,1,0,1.5,0V8.345l6.22,6.22A.75.75,0,1,0,15.207,13.5Z" transform="translate(1118.636 513.362) rotate(-135)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

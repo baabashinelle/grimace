@@ -1,6 +1,7 @@
 import React from "react";
 import grimacecoin from "../assets/icon.svg";
 import binance from "../assets/binance.svg";
+import arrows from "../assets/arrows.svg";
 import { BsArrowRight } from "react-icons/bs";
 import { MdKeyboardArrowDown} from "react-icons/md";
 import DropdownOption from "./DropdownOption";
@@ -20,10 +21,11 @@ function Token() {
       <div className="flex items-center font-bold gap-2 pt-8 pb-2 text-[#511597]">
         From <BsArrowRight /> To
       </div>
-      <div className="flex items-center bg-[#F3E8FF] px-3 py-2 rounded-md gap-2 justify-between">
+      <div className="flex items-center bg-[#F3E8FF] px-3 py-2 rounded-md gap-2 justify-between relative">
         <div className="flex items-center">
-          <img className="pl-2" src={binance} alt="Grimace Coin" />
+          <img className="pl-2" src={binance} alt="Binance Coin" />
           <div className="pl-2 text-[#511597]">BSC</div>
+          <img className="absolute right-6 -bottom-7 z-10 w-10" src={arrows} alt="Arrows" />
         </div>
         <MdKeyboardArrowDown className="text-[#511597] opacity-[0.5]" />
       </div>
