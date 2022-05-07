@@ -16,7 +16,11 @@ function Header() {
   return (
     <div>
       <div className="flex relative justify-between lg:px-10 pt-5 items-center px-1 pb-5 md:pb-0">
-        <img src={logo} alt="Grimace Bridge Logo" />
+        <img
+          src={logo}
+          alt="Grimace Bridge Logo"
+          className="w-[49%] lg:w-[24%] md:w-[38%]"
+        />
         <button
           className="border-2 border-[#511597] rounded-full lg:px-7 text-[#511597] h-9 text-sm lg:text-base px-3"
           onClick={() => handleModal()}
@@ -26,10 +30,10 @@ function Header() {
 
         {showModal ? (
           <>
-            <div className="lg:w-[60%] mx-auto flex items-center justify-center  fixed inset-0 z-50 ">
-              <div className="relative justify-center items-center flex outline-none focus:outline-none">
+            <div className="lg:w-[60%] mx-auto flex items-center justify-center  fixed inset-0 z-50 w-screen">
+              <div className="relative justify-center items-center flex outline-none focus:outline-none px-5">
                 {/*content*/}
-                <div className="border-0 rounded-2xl relative flex justify-center bg-[#E1D1F3] outline-none focus:outline-none w-[63%]">
+                <div className="border-0 rounded-2xl relative flex justify-center bg-[#E1D1F3] outline-none focus:outline-none">
                   <div className="relative py-4 flex-auto">
                     <div className="text-[#A05AF0] text-left font-bold flex justify-between  p-2 pb-4 px-5 ">
                       Connect Wallet
