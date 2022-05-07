@@ -7,12 +7,12 @@ import { FaTimes } from "react-icons/fa";
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
-  const [selectedTab, setSelectedTab] = useState('none')
+  const [selectedTab, setSelectedTab] = useState("none");
 
-  const  handleModal =() => {
-      setShowModal(!showModal)
-      setSelectedTab('none')
-  }
+  const handleModal = () => {
+    setShowModal(!showModal);
+    setSelectedTab("none");
+  };
   return (
     <div>
       <div className="flex relative justify-between lg:px-10 pt-5 items-center px-1 pb-5 md:pb-0">

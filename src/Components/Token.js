@@ -3,12 +3,9 @@ import grimacecoin from "../assets/icon.svg";
 import binance from "../assets/binance.svg";
 import arrows from "../assets/arrows.svg";
 import { BsArrowRight } from "react-icons/bs";
-import { MdKeyboardArrowDown} from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import DropdownOption from "./DropdownOption";
 import BridgeBtn from "./BridgeBtn";
-
-
-
 
 function Token() {
   return (
@@ -25,7 +22,11 @@ function Token() {
         <div className="flex items-center">
           <img className="pl-2" src={binance} alt="Binance Coin" />
           <div className="pl-2 text-[#511597]">BSC</div>
-          <img className="absolute right-6 -bottom-7 z-10 w-10" src={arrows} alt="Arrows" />
+          <img
+            className="absolute right-6 -bottom-7 z-10 w-10"
+            src={arrows}
+            alt="Arrows"
+          />
         </div>
         <MdKeyboardArrowDown className="text-[#511597] opacity-[0.5]" />
       </div>

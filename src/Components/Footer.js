@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import man from "../assets/3.svg";
 
 function Footer() {
@@ -11,7 +11,7 @@ function Footer() {
       />
       <div className="flex items-center w-full justify-center lg:justify-end">
         <p>
-          <span className="text-gray-400"> Powered by </span> 
+          <span className="text-gray-400"> Powered by </span>
           <span className="text-[#C495FF]"> Embrace Tech </span>
         </p>
       </div>
@@ -19,4 +19,4 @@ function Footer() {
   );
 }
 
-export default Footer 
+export default Footer;
