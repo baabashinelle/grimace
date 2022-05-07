@@ -3,6 +3,7 @@ import { useState } from "react";
 import logo from '../assets/websitemenu-logo.svg';
 import metamask from "../assets/metamask.svg";
 import walletconnect from "../assets/walletConnect.svg";
+import { FaTimes } from "react-icons/fa";
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
@@ -22,22 +23,24 @@ function Header() {
             <div className="justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative">
                 {/*content*/}
-                <div className="border-0 rounded-2xl relative flex bg-[#E1D1F3] outline-none focus:outline-none w-[63%]">
+                <div className="border-0 rounded-2xl relative flex justify-center bg-[#E1D1F3] outline-none focus:outline-none w-[63%]">
                   <div className="relative p-6 flex-auto">
                     <div className="text-[#A05AF0] text-left font-bold flex justify-between border-b-2 border-[#DAB9FF] p-1 ">
                       Connect Wallet
                       <span
-                        className="text-[#6609D5] bg-white rounded-full p1 cursor-pointer"
+                        className="text-[#6609D5] bg-white cursor-pointer flex items-center justify-center rounded-full p-1"
                         onClick={() => setShowModal(false)}
                       >
-                        x
+                        <FaTimes />
                       </span>
                     </div>
-                    <div className="text-[#A05AF0] font-thin text-sm bg-white p-4 rounded-xl text-left">
-                      By connecting a wallet, you agree to Grimace's{" "}
-                      <span className="font-bold">Terms of Service</span> and
-                      acknowledge that you have read and understood the
-                      Grimace's disclaimer
+                    <div className='pt-4'>
+                      <div className="text-[#A05AF0] font-thin text-sm bg-white p-4 rounded-xl text-left">
+                        By connecting a wallet, you agree to Grimace's{" "}
+                        <span className="font-bold">Terms of Service</span> and
+                        acknowledge that you have read and understood the
+                        Grimace's disclaimer
+                      </div>
                     </div>
                     <div className="flex text-[#A05AF0] pb-5 gap-3 pt-9 focus:bg-[#F7F0FF] cursor-pointer">
                       <img src={metamask} alt="Metamask" />

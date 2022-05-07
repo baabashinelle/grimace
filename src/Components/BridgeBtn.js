@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { MdTouchApp } from "react-icons/md";
+import { FaTimes } from "react-icons/fa";
 
 function BridgeBtn() {
   const [showModal, setShowModal] = useState(false);
@@ -17,19 +18,21 @@ function BridgeBtn() {
         <>
           <div className="justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative">
-              <button
-                className="bg-[#E1D1F3] text-[#A05AF0] rounded-xl p-1"
-                onClick={() => setShowModal(false)}
-              >
-                x
-              </button>
+              <div className="w-full mb-2 flex justify-end">
+                <button
+                  className="bg-[#E1D1F3] text-[#A05AF0] flex items-center justify-center rounded-full p-1"
+                  onClick={() => setShowModal(false)}
+                >
+                  <FaTimes/>
+                </button>
+              </div>
               {/*content*/}
               <div className="border-0 rounded-2xl relative flex w-full bg-[#E1D1F3] outline-none focus:outline-none">
-                <div className="relative p-6 flex-auto">
+                <div className="relative p-6 flex-auto w-[32rem]">
                   <div className="text-[#A05AF0] text-left font-bold flex">
                     <MdTouchApp className="text-2xl" /> Note
                   </div>
-                  <ul className="text-left text-[#A05AF0] pt-4">
+                  <ul className="text-left text-[#A05AF0] pt-4 list-disc ml-6">
                     <li>
                       The tokens will be sent to the same address they were sent
                       from
