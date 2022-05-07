@@ -16,19 +16,19 @@ function BridgeBtn() {
       </button>
       {showModal ? (
         <>
-          <div className="justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none">
+          <div className="w-screen  justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none  px-3">
             <div className="relative">
               <div className="w-full mb-2 flex justify-end">
                 <button
                   className="bg-[#E1D1F3] text-[#A05AF0] flex items-center justify-center rounded-full p-1"
                   onClick={() => setShowModal(false)}
                 >
-                  <FaTimes/>
+                  <FaTimes />
                 </button>
               </div>
               {/*content*/}
               <div className="border-0 rounded-2xl relative flex w-full bg-[#E1D1F3] outline-none focus:outline-none">
-                <div className="relative p-6 flex-auto w-[32rem]">
+                <div className="relative p-6 flex-auto">
                   <div className="text-[#A05AF0] text-left font-bold flex">
                     <MdTouchApp className="text-2xl" /> Note
                   </div>
@@ -43,7 +43,7 @@ function BridgeBtn() {
               </div>
             </div>
           </div>
-          <div className="opacity-[0.9] fixed inset-0 z-40 bg-black"></div>
+          <div className="opacity-[0.85] fixed inset-0 z-40 bg-black"></div>
         </>
       ) : null}
     </div>
