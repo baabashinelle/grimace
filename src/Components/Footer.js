@@ -12,7 +12,7 @@ function Footer() {
       <div className="flex items-center w-full justify-center lg:justify-end">
         <p>
           <span className="text-gray-400"> Powered by </span>
-          <span className="text-[#C495FF]"> Embrace Tech </span>
+          <span className="text-[#C495FF]"> Embrace Tech, 2022 </span>
         </p>
       </div>
     </div>
